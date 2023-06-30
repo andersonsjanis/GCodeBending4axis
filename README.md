@@ -12,3 +12,6 @@
 - Set *WARNING_ANGLE* to the maximum angle your system can print at due to clearances
 - Define your spline with *SPLINE_X* and *SPLINE_Z*. This array can contain an arbitrary number of points. Make sure the first X-coordinate is in the center of your part. Make sure the last z coordinate is higher or equal the highest z-coordiante in your GCode.
 - *SPLINE = CubicSpline(SPLINE_Z, SPLINE_X, bc_type=((1, 0), (1, -np.pi/6)))* defines the spline. You can alter the last pair of of *bc_type* (here *1,-np.pi/6*). This defines the final angle of your spline in RAD.
+# 4-axis support
+- The original code has been augmented to also output the current layer angle as the B coordinate in the generated G-code.
+- This enables printing G-code with extreme bends, using a multi-axis printer.
