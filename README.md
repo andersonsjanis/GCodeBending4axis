@@ -1,9 +1,11 @@
+![Screenshot](support_elimination.png)
 # GCodeBending
  This is a quick and dirty Python code to deform GCode so that it follows a defined spline.
 # Requirements
 - GCode needs to be sliced with relative extrusions activated, preferably in PrusaSlicer
 - You need enough clearance around your nozzle to print significant angles
 - The model can't be too large in the X dimension, otherwise you'll get self intersections
+- To make use of 4-axis functionality you need an at least 4-axis printer with B-axis (rotates around Y).
 # Usage
 - Place your part preferably in the middle of your print plate with known center X coordinates
 - Place the sliced GCode in the same directory as the Python script
@@ -15,3 +17,4 @@
 # 4-axis support
 - The original code has been augmented to also output the current layer angle as the B coordinate in the generated G-code.
 - This enables printing G-code with extreme bends, using a multi-axis printer.
+![Screenshot](4axis.jpg)
